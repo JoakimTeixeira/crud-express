@@ -1,6 +1,7 @@
 import express from "express";
 import { router } from "./routes/members.mjs";
 import exphbs from "express-handlebars";
+import { database } from "./database.mjs";
 
 const app = express();
 app.use(express.json());
@@ -14,6 +15,7 @@ app.set("view engine", "handlebars");
 app.get("/", (req, res) => {
   res.render("home", {
     title: "Member list",
+    database,
   });
 });
 
