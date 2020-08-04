@@ -4,8 +4,13 @@ import exphbs from "express-handlebars";
 import { database } from "./database.mjs";
 
 const app = express();
+
+// Body parser middleware
 app.use(express.json());
-app.use("/api/members", router);
+app.use(express.urlencoded({ extended: false }));
+
+// Members API routes
+app.use("/api/members/", router);
 
 // Express handlebars middleware
 app.engine("handlebars", exphbs());

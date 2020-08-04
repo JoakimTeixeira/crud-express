@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
   }
 
   database.push(newMember);
-  res.json(database);
+  res.redirect("/");
 });
 
 // Update member
