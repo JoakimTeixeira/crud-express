@@ -6,7 +6,7 @@ Simple server-side rendering CRUD API, using express and JSON mock server
 
 ## Running the Project
 
-To get started, fork the repository and then run the following commands:
+To get started, fork the repository, clone it, and then run the following commands:
 
     npm install
     npm run start:dev
